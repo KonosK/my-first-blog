@@ -23,7 +23,7 @@
                 <button type="submit" class="post btn btn-secondary" name="publish">Publish</button>
             </form>
         {% endif %}
-        <h2>{{ post.title }}</h2>
+        <h2 style="color: {{ post.title_color }};">{{ post.title }}</h2>
         <p>{{ post.text|linebreaksbr }}</p>
     </article>
 {% endblock %}
