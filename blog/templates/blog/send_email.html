@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div>
+        <h1>Send an email!</h1>
+
+        <form method="post" class = "post-form">
+            {% csrf_token %}
+            <label for="address">To:</label>
+            <input id="address" type="email" name="address"/>
+
+            <label for="subject">Subject:</label>
+            <input id="subject" name="subject" value="{{ subject }}"/>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" style = "height: 300px;">{{ message }}</textarea>
+
+            <input type="submit">
+        </form>
+        <p>{{ result }}</p>
+    </div>
+{% endblock %}
